@@ -1,5 +1,8 @@
 package ticTacToe.UI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -7,6 +10,7 @@ import javax.swing.WindowConstants;
 
 public class startUp {
 	static JFrame f = new JFrame("Start Up");
+	static gameBoard gBoard;
 	
 	public static void closeGui() {
 		f.dispose();
@@ -19,10 +23,22 @@ public class startUp {
 		
 		JButton onePlayerButton = new JButton("1 Player");
 		onePlayerButton.setBounds(0, 150, 100, 70);
+		onePlayerButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Calling gameBoard 1 player");
+				gBoard = new gameBoard(1);
+			}
+		});
 		f.add(onePlayerButton);
 		
 		JButton twoPlayerButton = new JButton("2 Player");
 		twoPlayerButton.setBounds(0, 230, 100, 70);
+		twoPlayerButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("Calling gameBoard 2 players");
+				gBoard = new gameBoard(2);
+			}
+		});
 		f.add(twoPlayerButton);
 		
 		f.setSize(400, 500);

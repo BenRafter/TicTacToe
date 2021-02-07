@@ -1,7 +1,19 @@
 package ticTacToe.UI;
 
 public class gameBoard {
-	public static void startGame(boolean singlePlayer) {
-		System.out.println("Single Player = " + singlePlayer);
+	
+	static int numberOfPlayers;
+	
+	gameBoard(int playerNum){
+		numberOfPlayers = playerNum;
+		startGame();
+	}
+	
+	public static int getPlayerNum() {
+		return numberOfPlayers;
+	}
+	
+	public static void startGame() {
+		System.out.println("Single Player = " + numberOfPlayers);
 	}
 }
