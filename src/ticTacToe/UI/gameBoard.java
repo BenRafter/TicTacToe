@@ -1,5 +1,8 @@
 package ticTacToe.UI;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.WindowConstants;
@@ -28,30 +31,75 @@ public class gameBoard {
 		
 		JButton topLeft = new JButton("");
 		topLeft.setBounds(0, 0, 200, 200);
+		topLeft.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("topLeft");
+			}
+		});
 		
 		JButton topMid = new JButton("");
 		topMid.setBounds(200, 0, 200, 200);
+		topMid.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("topMid");
+			}
+		});
 		
 		JButton topRight = new JButton("");
 		topRight.setBounds(400, 0, 200, 200);
+		topRight.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("topRight");
+			}
+		});
 		
 		JButton midLeft = new JButton("");
 		midLeft.setBounds(0, 200, 200, 200);
+		midLeft.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("midLeft");
+			}
+		});
 		
 		JButton midMid = new JButton("");
 		midMid.setBounds(200, 200, 200, 200);
+		midMid.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("midMid");
+			}
+		});
 		
 		JButton midRight = new JButton("");
 		midRight.setBounds(400, 200, 200, 200);
+		midRight.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("midRight");
+			}
+		});
 		
 		JButton botLeft = new JButton("");
 		botLeft.setBounds(0, 400, 200, 200);
+		botLeft.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("botLeft");
+			}
+		});
 		
 		JButton botMid = new JButton("");
 		botMid.setBounds(200, 400, 200, 200);
+		botMid.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("botMid");
+			}
+		});
 		
 		JButton botRight = new JButton("");
 		botRight.setBounds(400, 400, 200, 200);
+		botRight.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println("botRight");
+			}
+		});
 		
 		f.add(topLeft);
 		f.add(topMid);
