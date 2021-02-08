@@ -27,6 +27,7 @@ public class startUp {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Calling gameBoard 1 player");
 				gBoard = new gameBoard(1);
+				closeGui();
 			}
 		});
 		f.add(onePlayerButton);
@@ -37,6 +38,7 @@ public class startUp {
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Calling gameBoard 2 players");
 				gBoard = new gameBoard(2);
+				closeGui();
 			}
 		});
 		f.add(twoPlayerButton);
